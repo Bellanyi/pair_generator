@@ -3,6 +3,8 @@ from generator import Generator
 from person_printer import PersonPrinter
 import random
 
+from gift import Gift
+
 people= [
     Person(first_name="Dora", last_name="Pekk-Juhasz", sex="female"),
     Person(first_name="Zsolt", last_name="Tasnadi", sex="male"),
@@ -14,3 +16,11 @@ people= [
 
 p = PersonPrinter(people)
 p.run()
+
+gifts = [
+    Gift("piros zokni"),
+    Gift("pöttyös zokni"),
+]
+
+for gift in gifts:
+    print(gift.get_name())
